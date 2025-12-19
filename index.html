@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Threat Awareness Dashboard</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        background: radial-gradient(circle at top, #0f2027, #000);
+        color: #e0f7fa;
+        min-height: 100vh;
+    }
+
+    header {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        color: #00ffcc;
+        letter-spacing: 2px;
+        text-shadow: 0 0 15px #00ffcc;
+    }
+
+    header p {
+        margin-top: 10px;
+        color: #b0bec5;
+        font-size: 1.1rem;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 30px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .stat-box {
+        background: rgba(0, 255, 204, 0.05);
+        border: 1px solid rgba(0, 255, 204, 0.2);
+        border-radius: 15px;
+        padding: 25px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        transition: 0.3s;
+    }
+
+    .stat-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+    }
+
+    .stat-box h2 {
+        font-size: 2.2rem;
+        color: #00ffcc;
+    }
+
+    .stat-box span {
+        color: #90a4ae;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 40px 20px;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    section h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #00ffcc;
+        font-size: 2rem;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 25px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
+    }
+
+    .card h3 {
+        color: #00ffcc;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+        color: #cfd8dc;
+        line-height: 1.5;
+    }
+
+    .level {
+        margin-top: 15px;
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        background: rgba(255,0,0,0.15);
+        color: #ff5252;
+        border: 1px solid #ff5252;
+    }
+
+    .tips ul {
+        max-width: 700px;
+        margin: auto;
+        list-style: none;
+    }
+
+    .tips li {
+        background: rgba(0,255,204,0.05);
+        margin: 10px 0;
+        padding: 15px;
+        border-left: 4px solid #00ffcc;
+        border-radius: 8px;
+        color: #e0f2f1;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        color: #78909c;
+        font-size: 0.9rem;
+    }
+
+    footer span {
+        color: #00ffcc;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Cyber Threat Awareness Dashboard</h1>
+    <p>Understanding modern cyber attacks & staying protected</p>
+</header>
+
+<div class="stats">
+    <div class="stat-box">
+        <h2 id="attacks">0</h2>
+        <span>Attacks Today</span>
+    </div>
+    <div class="stat-box">
+        <h2 id="countries">0</h2>
+        <span>Countries Affected</span>
+    </div>
+    <div class="stat-box">
+        <h2 id="breaches">0</h2>
+        <span>Data Breaches</span>
+    </div>
+</div>
+
+<section>
+    <h2>Common Cyber Attacks</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Phishing</h3>
+            <p>Fake emails or messages trick users into revealing passwords or banking details.</p>
+
+<span class="level">High Risk</span>
+        </div>
+        <div class="card">
+            <h3>Ransomware</h3>
+            <p>Malware that locks your files and demands payment to restore access.</p>
+            <span class="level">Critical</span>
+        </div>
+        <div class="card">
+            <h3>DDoS Attack</h3>
+            <p>Floods a server with traffic to crash websites or online services.</p>
+            <span class="level">Medium Risk</span>
+        </div>
+        <div class="card">
+            <h3>Social Engineering</h3>
+            <p>Manipulating human psychology instead of hacking systems directly.</p>
+            <span class="level">High Risk</span>
+        </div>
+    </div>
+</section>
+
+<section class="tips">
+    <h2>How to Stay Safe</h2>
+    <ul>
+        <li>Use strong, unique passwords for every account</li>
+        <li>Enable Two-Factor Authentication (2FA)</li>
+        <li>Never click unknown links or attachments</li>
+        <li>Keep your system and software updated</li>
+        <li>Avoid public Wi-Fi for sensitive activities</li>
+    </ul>
+</section>
+
+<footer>
+    Made with 💻 by <span>Krittika Nath</span> | Internship Cyber Project
+</footer>
+
+<script>
+    let a = 1240, c = 78, b = 320;
+
+    setInterval(() => {
+        document.getElementById("attacks").innerText = a++;
+        document.getElementById("countries").innerText = c;
+        document.getElementById("breaches").innerText = b++;
+        if (a % 5 === 0) c++;
+    }, 150);
+</script>
+
+</body>
+</html>
